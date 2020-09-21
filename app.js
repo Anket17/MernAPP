@@ -29,6 +29,4 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('app'))
   .get('/cool', (req, res) => res.send(cool()))
-  .listen(PORT, ()=>{
-    console.log('eexpress server startedd' + PORT);
-});
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
