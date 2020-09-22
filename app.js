@@ -23,10 +23,5 @@ const userRouter = require('./routes/User');
 const { Router } = require('express');
 app.use('/user', userRouter);
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('client', path.join(__dirname, 'client'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('app'))
-  .get('/cool', (req, res) => res.send(cool()))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+ app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
